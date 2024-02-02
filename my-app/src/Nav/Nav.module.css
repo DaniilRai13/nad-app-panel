@@ -1,12 +1,11 @@
-.nav__container{
-  display: grid;
-  row-gap: 30px;
+.nav__container .nav__container__link {
+  margin-bottom: 40px;
 }
 
-a{
+a {
   text-decoration: none;
   color: #302f35;
   font-size: 28px;
   font-weight: 600;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -6,17 +6,17 @@ import Works from './Works/Works';
 
 function App() {
   return (
-    <div className="container">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="container">
         <Nav />
-        <main className=''>
+        <main className='main'>
           <Routes>
             <Route path='/uploadImg' element={<Upload />} />
             <Route path='/showWorks' element={<Works />} />
           </Routes>
         </main>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
