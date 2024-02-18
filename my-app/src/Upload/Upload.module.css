@@ -2,24 +2,6 @@
   display: none;
 }
 
-.upload__btns{
-  margin-bottom: 40px;
-}
-
-.open__btn,
-.send__btn {
-  display: inline;
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 12px 25px;
-  border-radius: 10px;
-  background: #7eda95;
-  color: black;
-  cursor: pointer;
-
-  transition: .2s background linear, .1s color linear;
-}
-
 .open__btn {
   margin-right: 20px;
   background: #80bae0;
@@ -35,6 +17,4 @@
   row-gap: 20px;
   column-gap: 20px;
   margin: 0 auto;
-  margin-bottom: 40px;
-  
 }
