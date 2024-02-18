@@ -1,11 +1,16 @@
-.nav__container .nav__container__link {
-  margin-bottom: 40px;
+.nav__container {
+  display: flex;
+  flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: #302f35;
+.nav__container .nav__container__link {
+  /* margin-bottom: 40px; */
   font-size: 28px;
-  font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9618a;
+  text-decoration: none;
+  color: #ececec;
+}
+
+.nav__container .nav__container__link:hover {
+  background-color: #444444;
 }
