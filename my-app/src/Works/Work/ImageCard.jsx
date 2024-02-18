@@ -4,10 +4,9 @@ import cls from './ImageCard.module.css'
 const ImageCard = (props) => {
   const file = props.file
 
-  // console.log(props.file.fileInfo)
   return (
     <div className={cls.card}>
-      <div className={cls.remove__btn} data-name="">&times;</div>
+      <div className={cls.remove__btn} onClick={() => { props.removeImg(file.fileInfo.name) }}>&times;</div>
       <div className={cls.card__info}>
         <span className={cls.card__info__name}>{file.fileInfo.name}</span>
       </div>
