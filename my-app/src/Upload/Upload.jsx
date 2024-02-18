@@ -12,6 +12,14 @@ const Upload = () => {
     inputRef.current.click()
   }
 
+  function removeImg(name) {
+    const updateFiles = files.filter((item) => {
+      return item.fileInfo.name !== name
+    })
+
+    setFiles(updateFiles)
+  }
+
   async function formatBytes(bytes, decimals = 2) {
     if (!+bytes) return '0 Bytes'
 
@@ -54,8 +62,8 @@ const Upload = () => {
           let width = image.width;
           let height = image.height;
 
-          const WIDTH = width / 2;
-          const HEIGHT = height / 2;
+          const WIDTH = width / 1.5;
+          const HEIGHT = height / 1.5;
 
           // Если изображение превышает максимальные размеры, изменяем их
           if (width > WIDTH || height > HEIGHT) {
@@ -73,7 +81,7 @@ const Upload = () => {
 
           // Получаем сжатое изображение в формате data URL
           compressedImageDataUrl = canvas.toDataURL('image/jpeg', 0.8);
-        
+
           console.log(files)
 
           let base64String = btoa(compressedImageDataUrl);
@@ -91,7 +99,7 @@ const Upload = () => {
             },
             base64: compressedImageDataUrl
           }])
-          
+
         }
 
       }
@@ -100,11 +108,11 @@ const Upload = () => {
 
     })
   }
-  const send = async ()=>{
-    try{
+  const send = async () => {
+    try {
       await sendToServer(files)
       setFiles([])
-    }catch(err){
+    } catch (err) {
 
     }
   }
@@ -118,12 +126,12 @@ const Upload = () => {
         >Load images</button>
         <button
           className={`${cls.send__btn} btn`}
-          onClick={()=>send()}
+          onClick={() => send()}
         >
           Send to server
         </button>
       </div>
-      <div className={`${cls.imgs__container}`}>{files.map(obj => <ImageCard file={obj} />)}</div>
+      <div className={`${cls.imgs__container}`}>{files.map(obj => <ImageCard removeImg={removeImg} file={obj} />)}</div>
     </div>
   )
 }
