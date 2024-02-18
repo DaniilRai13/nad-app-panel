@@ -1,5 +1,4 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-// import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
 
@@ -20,12 +19,10 @@ function connectionWithDatabase() {
   const db = getDatabase(app)
 
   return db;
-  // const db = getFirestore(app)
 }
 
 export const sendToServer = async (files) => {
   const id = new Date()
-  console.log(+id, files)
 
   let images = []
 
@@ -41,9 +38,6 @@ export const sendToServer = async (files) => {
   const db = connectionWithDatabase()
 
   set(ref(db, 'works/' + +id), {
-    mainImg: files[0].base64,
     images
   });
-
-  console.log(images)
 }

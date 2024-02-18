@@ -11,8 +11,8 @@ function App() {
         <Nav />
         <main className='main'>
           <Routes>
-            <Route path='/uploadImg' element={<Upload />} />
-            <Route path='/showWorks' element={<Works />} />
+            <Route path='/' element={<Upload />} />
+            {/* <Route path='/showWorks' element={<Works />} /> */}
           </Routes>
         </main>
       </div>
