@@ -5,10 +5,7 @@
   transform: scale(1);
   cursor: pointer;
   transition: .2s transform linear;
-}
-
-.card:first-child {
-  border: 6px solid #e6f561;
+  margin-top: 40px;
 }
 
 .card.close {
@@ -63,6 +60,11 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.card:first-child img {
+  box-sizing: border-box;
+  border: 6px solid #e6f561;
 }
 
 .card:hover .card__info {
