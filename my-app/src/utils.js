@@ -1,6 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
-import { ref, set } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, set } from "firebase/database";
 
 function connectionWithDatabase() {
   const firebaseConfig = {
